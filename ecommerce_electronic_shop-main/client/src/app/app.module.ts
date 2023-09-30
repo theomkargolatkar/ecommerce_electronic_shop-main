@@ -57,4 +57,4 @@ import { ShortenPipe } from "./pipes/shorten.pipe";
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

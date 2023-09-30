@@ -21,7 +21,7 @@ app.use("/user", userRoutes);
 app.use("/shop", shopRoutes);
 
 mongoose
-  .connect(mongooseURI)
+  .connect(mongooseURI, { useNewUrlParser: true })
   .then(() => {
     const port = process.env.PORT || 5000;
     const server = app.listen(port, () => {
