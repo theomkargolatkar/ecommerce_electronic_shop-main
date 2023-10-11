@@ -1,8 +1,4 @@
 <div class="row">
-  <div *ngIf="!authService.loggedIn()" class="col-md">
-    <app-login></app-login>
-    <app-register></app-register>
-  </div>
   <div class="col-md border bg-light">
     <h1 class="text-danger text-center m-3">
       <fa name="shopping-cart" class="pr-2"></fa>E-Commerce
@@ -17,25 +13,25 @@
         alt="Products Info" />
     </p>
   </div>
-  <div class="col-md bg-dark p-4">
-    <p class="mx-4"><img src="./assets/images/about-info.jpg" class="img-fluid rounded" alt="Products Info" /></p>
-    <!-- spinner -->
-    <div *ngIf="isLoading" class="spinner-border text-danger" role="status">
-      <span class="sr-only">Loading...</span>
-    </div>
-    <div class="text-center text-white border rounded p-1 mx-5 my-4">
-      <span><strong>{{ productsTotal }}</strong></span>
-      products are now available in our store!<br />
-      <span><strong>{{ ordersTotal }}</strong></span>
-      orders has been purchased on our site
-    </div>
+</div>
+<div class="col-md bg-dark p-4">
+  <p class="mx-4" style="text-align: center;"><img src="./assets/images/about-info.jpg" class="img-fluid rounded"
+      alt="Products Info" /></p>
+  <!-- spinner -->
+  <div *ngIf="isLoading" class="spinner-border text-danger" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="text-center text-white border rounded p-1 mx-5 my-4">
+    <span><strong>{{ productsTotal }}</strong></span>
+    products are now available in our store!<br />
+    <span><strong>{{ ordersTotal }}</strong></span>
+    orders has been purchased on our site
+  </div>
 
-    <div *ngIf="user" class="text-center bg-warning border rounded p-1 mx-5">
-      <app-notification-panel [user]="user"></app-notification-panel>
-    </div>
+  <div *ngIf="user" class="text-center bg-warning border rounded p-1 mx-5">
+    <app-notification-panel [user]="user"></app-notification-panel>
   </div>
 </div>
-
 <!-- The Modal -->
 <div class="modal" id="mainModal" [ngStyle]="{ display: display }">
   <div class="modal-dialog">
@@ -58,3 +54,85 @@
     </div>
   </div>
 </div>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>E-commerce
+          </h6>
+          <p>
+            E-commerce (electronic commerce) is the buying and selling of goods and services, or the transmitting of
+            funds or data,
+            over an electronic network, primarily the internet.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a routerLink="/dashboard" class="text-reset">Mobile Phones</a>
+          </p>
+          <p>
+            <a routerLink="/dashboard" class="text-reset">Tablets</a>
+          </p>
+          <p>
+            <a routerLink="/dashboard" class="text-reset">Wearables</a>
+          </p>
+          <p>
+            <a routerLink="/dashboard" class="text-reset">Laptop</a>
+          </p>
+          <p>
+            <a routerLink="/dashboard" class="text-reset">Tvs</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a routerLink="/dashboard" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a routerLink="/dashboard" class="text-reset">Orders</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Contact
+          </h6>
+          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+</footer>
+<!-- Footer -->

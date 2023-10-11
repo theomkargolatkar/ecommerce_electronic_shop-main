@@ -22,6 +22,7 @@
     "angular-font-awesome": "^3.1.2",
     "bootstrap": "^4.6.2",
     "core-js": "^2.5.4",
+    "coreui": "^0.4.2-alpha2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.6.4",
     "jspdf": "^1.5.3",
